@@ -1,28 +1,27 @@
-
 import java.util.Scanner;
- public class Main
-{
-    public static void main(String arg[])
-    {
-        long n,sum=0;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter a number");
-        n=sc.nextLong();
-        int i=1;
-        while(i<=n/2)
-        {
-            if(n%i==0)
-            {
-                sum=sum+i;
+ public class Main {
 
-            }
-            i++;
-        }
-        if(sum==n)
-        {
-            System.out.println(n+" is a perfect number");
-        }
-        else
-            System.out.println(n+" is not a  perfect number");
-    }
-}
+     public static void main(String[] args) {
+
+         Scanner s = new Scanner(System.in);
+         System.out.println("Enter a number :");
+         int n = s.nextInt();
+
+         int count = 0;
+         if (n <= 1) {
+             System.out.println("The number is not prime");
+             return;
+         }
+
+         for (int i = 1; i <= n / 2; i++) {
+             if (n % i == 0) {
+                 count++;
+             }
+         }
+         if (count > 1) {
+             System.out.println("The number is not prime");
+         } else {
+             System.out.println("The number is prime");
+         }
+     }
+ }
