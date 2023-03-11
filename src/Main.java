@@ -1,27 +1,16 @@
-import java.util.Scanner;
- public class Main {
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int number = 12345;
+        int reverse = 0;
+        while(number != 0)
+        {
+            int remainder = number % 10;
+            reverse = reverse * 10 + remainder;
+            number = number/10;
+        }
 
-     public static void main(String[] args) {
-
-         Scanner s = new Scanner(System.in);
-         System.out.println("Enter a number :");
-         int n = s.nextInt();
-
-         int count = 0;
-         if (n <= 1) {
-             System.out.println("The number is not prime");
-             return;
-         }
-
-         for (int i = 1; i <= n / 2; i++) {
-             if (n % i == 0) {
-                 count++;
-             }
-         }
-         if (count > 1) {
-             System.out.println("The number is not prime");
-         } else {
-             System.out.println("The number is prime");
-         }
-     }
- }
+       System.out.println("The reverse of the given number is: " + reverse);
+    }
+}  
