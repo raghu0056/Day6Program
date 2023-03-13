@@ -1,16 +1,18 @@
+import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args)
     {
-        int number = 12345;
-        int reverse = 0;
-        while(number != 0)
-        {
-            int remainder = number % 10;
-            reverse = reverse * 10 + remainder;
-            number = number/10;
-        }
-
-       System.out.println("The reverse of the given number is: " + reverse);
-    }
-}  
+       Scanner sc=new Scanner(System.in);
+       long start,end;
+       double tim;
+       System.out.println("Type any character to start the stopwatch");
+       char s=sc.next().charAt(0);
+       start=System.currentTimeMillis();
+       System.out.println("Type any character to stop the stopwatch");
+       char m=sc.next().charAt(0);
+       end=System.currentTimeMillis();
+        tim=(end-start)/1000;
+         System.out.println("The elapsed time is:" +tim);
+}
+}
